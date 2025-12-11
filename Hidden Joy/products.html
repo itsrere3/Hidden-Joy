@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Hidden Joy - Products</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Icons -->
+<link rel="apple-touch-icon" href="asset/img/apple-icon.png">
+<link rel="shortcut icon" type="image/x-icon" href="asset/img/favicon.ico">
+
+<!-- CSS -->
+<link rel="stylesheet" href="asset/css/bootstrap.min.css">
+<link rel="stylesheet" href="asset/css/templatemo.css">
+<link rel="stylesheet" href="asset/css/products.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+<!-- JS -->
+<script src="asset/js/bootstrap.bundle.min.js"></script>
+<script src="asset/js/products.js"></script>
+<script src="asset/js/custom.js"></script>
+
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- Header / Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light shadow">
+<div class="container d-flex justify-content-between align-items-center">
+<a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
+<img src="asset/img/BOXLOGO.png" alt="Hidden Joy Logo" style="height: 100px;">
+</a>
+
+<button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="align-self-center collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+<div class="flex-fill">
+<ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="aboutus.html">About</a></li>
+<li class="nav-item"><a class="nav-link" href="contactus.html">Contact</a></li>
+<li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
+</ul>
+</div>
+
+<div class="navbar align-self-center d-flex align-items-center gap-3">
+<a class="nav-icon d-none d-lg-inline" href="#"><i class="fa fa-fw fa-search text-dark"></i></a>
+<a class="nav-link text-dark position-relative" href="basket.html">
+<i class="fas fa-shopping-cart fa-lg"></i>
+<span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">0</span>
+</a>
+
+<div class="dropdown">
+<a class="nav-link dropdown-toggle text-dark" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+<i class="fa fa-fw fa-user"></i>
+</a>
+<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+<li><a class="dropdown-item" href="singin.html">Login</a></li>
+<li><a class="dropdown-item" href="signup.html">Register</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</nav>
+
+<!-- Toast Notification -->
+<div class="toast-container">
+  <div id="addedToCartToast" class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+        <i class="fas fa-check-circle me-2"></i> Product added to cart!
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+</div>
+
+<!-- Page Header -->
+<div class="container-fluid py-5 products-header">
+<div class="col-md-6 m-auto text-center">
+<h1 class="fw-bold">Our Products</h1>
+<p class="lead">Discover unique boxes and stickers made with love 💝</p>
+</div>
+</div>
+
+<!-- Filter Section -->
+<div class="container my-4">
+  <div class="filter-section">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h5 class="mb-0">Filter Products</h5>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <label for="sort" class="me-2 fw-bold">Sort by:</label>
+        <select id="sort" class="form-select d-inline-block w-auto">
+          <option value="default">Default</option>
+          <option value="asc">Price: Low to High</option>
+          <option value="desc">Price: High to Low</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Boxes Section -->
+<div class="container my-5">
+<h2 class="mb-4 fw-bold text-burgundy border-bottom pb-2">Surprise Boxes</h2>
+<div class="row justify-content-center g-4" id="product-list">
+
+<!-- 6 Box Products -->
+<div class="col-md-4 col-lg-3 col-sm-6 product-item" data-price="180" data-category="box">
+<div class="card product-card h-100">
+  <div class="position-relative overflow-hidden">
+    <img class="card-img-top product-img" src="asset/img/hidd2.png" alt="Mystery Box">
+    <div class="position-absolute top-0 end-0 m-2">
+      <span class="badge bg-success">New</span>
+    </div>
+  </div>
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title">Mystery Box</h5>
+    <p class="card-text text-muted small">A surprise selection of curated items for endless excitement.</p>
+    <div class="mt-auto">
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <span class="product-price">180 SAR</span>
+        <div class="rating small text-warning">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+      </div>
+      
+<button class="btn btn-success w-100 add-to-cart" 
+        data-id="1" 
+        data-name="Mystery Box" 
+        data-price="180" 
+        data-image="asset/img/hidd2.png">
+    <i class="fas fa-cart-plus me-2"></i>Add to Cart
+</button>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div class="col-md-4 col-lg-3 col-sm-6 product-item" data-price="300" data-category="box">
+<div class="card product-card h-100">
+  <div class="position-relative overflow-hidden">
+    <img class="card-img-top product-img" src="asset/img/hidd3.png" alt="Love Box">
+    <div class="position-absolute top-0 end-0 m-2">
+      <span class="badge bg-danger">Popular</span>
+    </div>
+  </div>
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title">Love Box</h5>
+    <p class="card-text text-muted small">Express your feelings with this romantic surprise collection.</p>
+    <div class="mt-auto">
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <span class="product-price">300 SAR</span>
+        <div class="rating small text-warning">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+  <button class="btn btn-success w-100 add-to-cart" 
+        data-id="1" 
+        data-name="Mystery Box" 
+        data-price="180" 
+        data-image="asset/img/hidd2.png">
+    <i class="fas fa-cart-plus me-2"></i>Add to Cart
+</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="col-md-4 col-lg-3 col-sm-6 product-item" data-price="280" data-category="box">
+<div class="card product-card h-100">
+  <div class="position-relative overflow-hidden">
+    <img class="card-img-top product-img" src="asset/img/hidd4.png" alt="Dream Box">
+  </div>
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title">Dream Box</h5>
+    <p class="card-text text-muted small">Inspiring items to help pursue dreams and aspirations.</p>
+    <div class="mt-auto">
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <span class="product-price">280 SAR</span>
+        <div class="rating small text-warning">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+      </div>
+      <button class="btn btn-success w-100 add-to-cart" 
+        data-id="1" 
+        data-name="Mystery Box" 
+        data-price="180" 
+        data-image="asset/img/hidd2.png">
+    <i class="fas fa-cart-plus me-2"></i>Add to Cart
+</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="col-md-4 col-lg-3 col-sm-6 product-item" data-price="350" data-category="box">
+<div class="card product-card h-100">
+  <div class="position-relative overflow-hidden">
+    <img class="card-img-top product-img" src="asset/img/hidd1.png" alt="Surprise Bundle">
+    <div class="position-absolute top-0 end-0 m-2">
+      <span class="badge bg-warning text-dark">Limited</span>
+    </div>
+  </div>
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title">Surprise Bundle</h5>
+    <p class="card-text text-muted small">Our premium collection with the best surprises and delights.</p>
+    <div class="mt-auto">
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <span class="product-price">350 SAR</span>
+        <div class="rating small text-warning">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+      </div>
+      <button class="btn btn-success w-100 add-to-cart" 
+        data-id="1" 
+        data-name="Mystery Box" 
+        data-price="180" 
+        data-image="asset/img/hidd2.png">
+    <i class="fas fa-cart-plus me-2"></i>Add to Cart
+</button>
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- Stickers Section -->
+<div class="container my-5">
+<h2 class="mb-4 fw-bold text-burgundy border-bottom pb-2">Sticker Collections</h2>
+<div class="row justify-content-center g-4">
+
+<!-- 4 Sticker Products -->
+<div class="col-md-4 col-lg-3 col-sm-6 product-item" data-price="15" data-category="sticker">
+<div class="card product-card h-100">
+  <div class="position-relative overflow-hidden">
+    <img class="card-img-top product-img" src="asset/img/sticker_01.jpeg" alt="Sticker Pack 1">
+  </div>
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title">Cute Animals</h5>
+    <p class="card-text text-muted small">Adorable animal stickers for planners and journals.</p>
+    <div class="mt-auto">
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <span class="product-price">15 SAR</span>
+        <div class="rating small text-warning">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+      </div>
+      <button class="btn btn-success w-100 add-to-cart" 
+        data-id="1" 
+        data-name="Mystery Box" 
+        data-price="180" 
+        data-image="asset/img/hidd2.png">
+    <i class="fas fa-cart-plus me-2"></i>Add to Cart
+</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="col-md-4 col-lg-3 col-sm-6 product-item" data-price="20" data-category="sticker">
+<div class="card product-card h-100">
+  <div class="position-relative overflow-hidden">
+    <img class="card-img-top product-img" src="asset/img/sticker_02.jpeg" alt="Sticker Pack 2">
+    <div class="position-absolute top-0 end-0 m-2">
+      <span class="badge bg-success">New</span>
+    </div>
+  </div>
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title">Floral Dreams</h5>
+    <p class="card-text text-muted small">Beautiful floral designs to decorate your belongings.</p>
+    <div class="mt-auto">
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <span class="product-price">20 SAR</span>
+        <div class="rating small text-warning">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <i class="far fa-star"></i>
+        </div>
+      </div>
+      <button class="btn btn-success w-100 add-to-cart" 
+        data-id="1" 
+        data-name="Mystery Box" 
+        data-price="180" 
+        data-image="asset/img/hidd2.png">
+    <i class="fas fa-cart-plus me-2"></i>Add to Cart
+</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="col-md-4 col-lg-3 col-sm-6 product-item" data-price="18" data-category="sticker">
+<div class="card product-card h-100">
+  <div class="position-relative overflow-hidden">
+    <img class="card-img-top product-img" src="asset/img/sticker_03.jpeg" alt="Sticker Pack 3">
+  </div>
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title">Quotes & Sayings</h5>
+    <p class="card-text text-muted small">Inspirational quotes and motivational sayings.</p>
+    <div class="mt-auto">
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <span class="product-price">18 SAR</span>
+        <div class="rating small text-warning">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+      <button class="btn btn-success w-100 add-to-cart" 
+        data-id="1" 
+        data-name="Mystery Box" 
+        data-price="180" 
+        data-image="asset/img/hidd2.png">
+    <i class="fas fa-cart-plus me-2"></i>Add to Cart
+</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="col-md-4 col-lg-3 col-sm-6 product-item" data-price="25" data-category="sticker">
+<div class="card product-card h-100">
+  <div class="position-relative overflow-hidden">
+    <img class="card-img-top product-img" src="asset/img/sticker_04.jpeg" alt="Sticker Pack 4">
+    <div class="position-absolute top-0 end-0 m-2">
+      <span class="badge bg-danger">Popular</span>
+    </div>
+  </div>
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title">Kawaii Collection</h5>
+    <p class="card-text text-muted small">Super cute kawaii style stickers in various designs.</p>
+    <div class="mt-auto">
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <span class="product-price">25 SAR</span>
+        <div class="rating small text-warning">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+      </div>
+      <button class="btn btn-success w-100 add-to-cart" 
+        data-id="1" 
+        data-name="Mystery Box" 
+        data-price="180" 
+        data-image="asset/img/hidd2.png">
+    <i class="fas fa-cart-plus me-2"></i>Add to Cart
+</button>
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark" id="hiddenjoy_footer">
+<div class="container">
+<div class="row">
+
+<div class="col-md-3 pt-5">
+<h2 class="h2 text-success border-bottom pb-3 border-light logo">Hidden Joy</h2>
+<p class="small text-light">Hidden Joy is an online store designed to bring excitement to your shopping.</p>
+</div>
+
+<div class="col-md-3 pt-5">
+<h2 class="h2 text-light border-bottom pb-3 border-light">Store Info</h2>
+<ul class="list-unstyled text-light footer-link-list small">
+<li><i class="fas fa-map-marker-alt fa-fw"></i> Alkhobar, Saudi Arabia</li>
+<li><i class="fa fa-phone fa-fw"></i> <a class="text-decoration-none text-light" href="tel:+966500000000">+966 559661298</a></li>
+<li><i class="fa fa-envelope fa-fw"></i> <a class="text-decoration-none text-light" href="mailto:info@hiddenjoy.com">info@hiddenjoy.com</a></li>
+</ul>
+</div>
+
+<div class="col-md-3 pt-5">
+<h2 class="h2 text-light border-bottom pb-3 border-light">Shop by Joy</h2>
+<ul class="list-unstyled text-light footer-link-list">
+<li><a class="text-decoration-none" href="#">Surprise Boxes</a></li>
+<li><a class="text-decoration-none" href="#">Themes boxes</a></li>
+<li><a class="text-decoration-none" href="#">Gifts for Her</a></li>
+</ul>
+</div>
+
+<div class="col-md-3 pt-5">
+<h2 class="h2 text-light border-bottom pb-3 border-light">Quick Links</h2>
+<ul class="list-unstyled text-light footer-link-list">
+<li><a class="text-decoration-none" href="index.html">Home</a></li>
+<li><a class="text-decoration-none" href="aboutus.html">About Us</a></li>
+<li><a class="text-decoration-none" href="contactus.html">Contact</a></li>
+</ul>
+</div>
+</div>
+
+<div class="row text-light mt-4 align-items-center">
+<div class="col-auto me-auto">
+<ul class="list-inline footer-icons small mb-0">
+<li class="list-inline-item border rounded-circle p-2 social-icon"><a href="#"><i class="fab fa-instagram text-light"></i></a></li>
+<li class="list-inline-item border rounded-circle p-2 social-icon"><a href="#"><i class="fab fa-tiktok text-light"></i></a></li>
+<li class="list-inline-item border rounded-circle p-2 social-icon"><a href="https://wa.me/559661298" target="_blank"><i class="fab fa-whatsapp text-light"></i></a></li>
+</ul>
+</div>
+
+<div class="col-auto">
+<div class="input-group input-group-sm">
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="w-100 bg-black text-center text-light py-4 mt-4">
+<strong>&copy; 2026 Hidden Joy</strong> | Made with ❤️ by Hidden Joy
+</div>
+</footer>
+
+</body>
+</html>

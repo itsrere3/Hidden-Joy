@@ -1,0 +1,301 @@
+:root {
+    --main-color: #8a1538; /* Burgundy */
+    --secondary-color: #28a745; /* Success Green */
+    --light-burgundy: #a83257;
+    --dark-burgundy: #6d102c;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fredoka', sans-serif;
+}
+
+.text-burgundy {
+    color: var(--main-color);
+}
+
+.bg-burgundy {
+    background-color: var(--main-color);
+}
+
+.btn-main {
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-main:hover {
+    background-color: var(--dark-burgundy);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../img/img7.PNG') center/cover no-repeat;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+/* About Image */
+.about-image-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.about-image-container img {
+    transition: transform 0.5s ease;
+}
+
+.about-image-container:hover img {
+    transform: scale(1.03);
+}
+
+/* Journey Section - Redesigned */
+.journey-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.journey-item {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 80px;
+}
+
+.journey-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    background: var(--main-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    box-shadow: 0 4px 15px rgba(138, 21, 56, 0.3);
+}
+
+.journey-content {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    padding: 25px;
+    border-left: 4px solid var(--main-color);
+    transition: transform 0.3s ease;
+}
+
+.journey-content:hover {
+    transform: translateX(10px);
+}
+
+.journey-year {
+    color: var(--main-color);
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.journey-title {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+
+/* Team Section - Without Images */
+.team-member-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    padding: 30px 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border-top: 4px solid var(--main-color);
+    height: 100%;
+}
+
+.team-member-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.member-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--main-color), var(--light-burgundy));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: white;
+    font-size: 32px;
+    box-shadow: 0 6px 20px rgba(138, 21, 56, 0.3);
+}
+
+.member-role {
+    color: var(--main-color);
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.member-quote {
+    font-style: italic;
+    color: #666;
+    position: relative;
+    padding: 0 10px;
+}
+
+.member-quote::before {
+    content: '"';
+    font-size: 40px;
+    color: var(--light-burgundy);
+    position: absolute;
+    left: -5px;
+    top: -15px;
+    opacity: 0.3;
+}
+
+/* Services */
+.services-icon-wap {
+    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
+}
+
+.services-icon-wap:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-color: var(--main-color);
+}
+
+.services-icon-wap i {
+    color: var(--main-color);
+}
+
+/* Counters */
+.counter-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Back to top button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+}
+
+.back-to-top:hover {
+    background-color: var(--dark-burgundy);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Navbar styling */
+.nav-link {
+    position: relative;
+    font-weight: 500;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--main-color);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.footer-link-list a {
+    transition: all 0.3s ease;
+}
+
+.footer-link-list a:hover {
+    color: var(--secondary-color) !important;
+    padding-left: 5px;
+}
+
+.social-icon {
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .journey-item {
+        padding-left: 60px;
+    }
+
+    .journey-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .hero-section {
+        min-height: 300px;
+    }
+
+    .team-member-card {
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Hidden Joy - Basket Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon" href="asset/img/apple-icon.png">
+  <link rel="shortcut icon" type="image/x-icon" href="asset/img/favicon.ico">
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+  <link rel="stylesheet" href="asset/css/templatemo.css">
+  <link rel="stylesheet" href="asset/css/basket.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap">
+  <link rel="stylesheet" href="asset/css/fontawesome.min.css">
+
+  <!-- Scripts -->
+  <script src="asset/js/bootstrap.bundle.min.js"></script>
+  <script src="asset/js/custom.js"></script>
+  <script src="asset/js/basket.js"></script>
+
+
+</head>
+
+<body>
+
+<!-- Header -->
+<nav class="navbar navbar-expand-lg navbar-light shadow bg-white sticky-top">
+<div class="container d-flex justify-content-between align-items-center">
+
+<!-- Logo -->
+<a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
+<img src="asset/img/BOXLOGO.png" alt="Hidden Joy Logo" style="height: 100px;">
+</a>
+
+<!-- Toggler -->
+<button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<!-- Navbar Links -->
+<div class="align-self-center collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+<div class="flex-fill">
+<ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="aboutus.html">About</a></li>
+<li class="nav-item"><a class="nav-link" href="contactus.html">Contact</a></li>
+<li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+</ul>
+</div>
+
+<!-- Search & User -->
+<div class="navbar align-self-center d-flex align-items-center gap-3">
+
+<!-- Desktop search -->
+<a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
+<i class="fa fa-fw fa-search text-dark"></i>
+       </a>
+
+<!-- Basket Icon -->
+<a class="nav-link text-dark position-relative" href="basket.html">
+<i class="fas fa-shopping-cart fa-lg"></i>
+<span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">0</span>
+</a>
+
+<!-- User Dropdown -->
+<div class="dropdown">
+<a class="nav-link dropdown-toggle text-dark" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+<i class="fa fa-fw fa-user"></i>
+</a>
+<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+<li><a class="dropdown-item" href="singin.html">Login</a></li>
+<li><a class="dropdown-item" href="signup.html">Register</a></li>
+</ul>
+</div>
+
+</div>
+</div>
+</div>
+</nav>
+
+<!-- Page Header -->
+<div class="container-fluid bg-light py-4">
+  <div class="col-md-6 m-auto text-center">
+    <h1 class="fw-bold text-burgundy">Your Shopping Basket</h1>
+    <p class="text-muted">Review your selected items before checkout 🛒</p>
+  </div>
+</div>
+
+<!-- Basket Section -->
+<div class="container py-5">
+  <div class="row">
+    
+    <!-- Basket Items -->
+    <div class="col-lg-8">
+      <!-- Empty Cart State (Shown by default) -->
+      <div class="empty-cart card shadow-sm" id="empty-cart">
+        <div class="card-body">
+          <div class="empty-cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+          <h3 class="text-muted">Your basket is empty</h3>
+          <p class="text-muted mb-4">Looks like you haven't added anything to your basket yet.</p>
+          <a href="products.html" class="btn btn-main btn-lg">Start Shopping</a>
+        </div>
+      </div>
+      
+      <!-- Cart Items Container (Hidden by default) -->
+      <div class="card shadow-sm mb-4 d-none" id="cart-items-container">
+        <div class="card-header bg-white d-flex justify-content-between align-items-center">
+          <h5 class="mb-0" id="cart-items-count">Your Items (0)</h5>
+          <a href="products.html" class="btn btn-outline-secondary btn-sm">
+            <i class="fas fa-arrow-left me-1"></i> Continue Shopping
+          </a>
+        </div>
+        
+        <div class="card-body p-0" id="cart-items-list">
+          <!-- Cart items will be dynamically added here -->
+        </div>
+      </div>
+    </div>
+    
+<!-- Order Summary -->
+<div class="col-lg-4">
+<div class="summary-card card">
+<div class="card-body">
+<h5 class="card-title fw-bold text-burgundy mb-3">Order Summary</h5>
+          
+<div class="d-flex justify-content-between mb-2">
+<span>Subtotal (<span id="subtotal-items">0</span> items)</span>
+<span id="subtotal">$0.00</span>
+</div>
+          
+<div class="d-flex justify-content-between mb-2">
+<span>Shipping</span>
+<span id="shipping">$0.00</span>
+</div>
+          
+<div class="d-flex justify-content-between mb-2">
+<span>Tax</span>
+<span id="tax">$0.00</span>
+</div>
+          
+<div class="discount-code">
+<div class="input-group input-group-sm">
+<input type="text" class="form-control" placeholder="Discount code">
+<button class="btn btn-outline-secondary" type="button">Apply</button>
+</div>
+</div>
+          
+<hr>
+          
+<div class="d-flex justify-content-between fw-bold fs-5">
+<span>Total</span>
+<span id="grandTotal">$0.00</span>
+</div>
+          
+<button class="btn btn-main w-100 mt-3 py-2" id="checkout-btn">
+<i class="fas fa-lock me-2"></i>Proceed to Checkout
+</button>
+          
+<div class="text-center mt-3">
+<small class="text-muted">
+<i class="fas fa-shield-alt me-1"></i>Secure checkout guaranteed
+</small>
+</div>
+</div>
+</div>
+      
+<!-- Trust Badges -->
+<div class="card mt-4 shadow-sm">
+<div class="card-body text-center">
+<h6 class="card-title mb-3">We Accept</h6>
+<div class="d-flex justify-content-around">
+<i class="fab fa-cc-visa text-muted fa-2x"></i>
+<i class="fab fa-cc-mastercard text-muted fa-2x"></i>
+<i class="fab fa-cc-paypal text-muted fa-2x"></i>
+<i class="fab fa-cc-apple-pay text-muted fa-2x"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Recently Viewed Section -->
+<div class="container pb-5">
+<div class="row">
+<div class="col-12">
+<h3 class="fw-bold text-burgundy mb-4">You Might Also Like</h3>
+<div class="row">
+<!-- Product 1 -->
+<div class="col-md-3 col-6 mb-4">
+<div class="card product-card shadow-sm h-100">
+<img src="asset/img/hidd2.png" class="card-img-top" alt="Adventure Box">
+<div class="card-body">
+<h6 class="card-title">Adventure Box</h6>
+<p class="card-text text-muted small">For the thrill seekers</p>
+<div class="d-flex justify-content-between align-items-center">
+<span class="fw-bold text-burgundy">$65.00</span>
+<button class="btn btn-sm btn-outline-success add-to-cart-recommended" data-id="11" data-name="Adventure Box" data-price="65" data-image="asset/img/hidd2.png">
+<i class="fas fa-cart-plus"></i>
+</button>
+</div>
+</div>
+</div>
+</div>
+        
+<!-- Product 2 -->
+<div class="col-md-3 col-6 mb-4">
+<div class="card product-card shadow-sm h-100">
+<img src="asset/img/hidd1.png" class="card-img-top" alt="Relaxation Box">
+<div class="card-body">
+<h6 class="card-title">Relaxation Box</h6>
+<p class="card-text text-muted small">Pamper yourself</p>
+<div class="d-flex justify-content-between align-items-center">
+<span class="fw-bold text-burgundy">$55.00</span>
+<button class="btn btn-sm btn-outline-success add-to-cart-recommended" data-id="12" data-name="Relaxation Box" data-price="55" data-image="asset/img/hidd1.png">
+<i class="fas fa-cart-plus"></i>
+</button>
+</div>
+</div>
+</div>
+</div>
+        
+<!-- Product 3 -->
+<div class="col-md-3 col-6 mb-4">
+<div class="card product-card shadow-sm h-100">
+<img src="asset/img/hidd3.png" class="card-img-top" alt="Beauty Box">
+<div class="card-body">
+<h6 class="card-title">Beauty Box</h6>
+<p class="card-text text-muted small">Skincare and cosmetics</p>
+<div class="d-flex justify-content-between align-items-center">
+<span class="fw-bold text-burgundy">$75.00</span>
+<button class="btn btn-sm btn-outline-success add-to-cart-recommended" data-id="13" data-name="Beauty Box" data-price="75" data-image="asset/img/hidd3.png">
+<i class="fas fa-cart-plus"></i>
+</button>
+</div>
+</div>
+</div>
+</div>
+        
+<!-- Product 4 -->
+<div class="col-md-3 col-6 mb-4">
+<div class="card product-card shadow-sm h-100">
+<img src="asset/img/hidd4.png" class="card-img-top" alt="Gourmet Box">
+<div class="card-body">
+<h6 class="card-title">Gourmet Box</h6>
+<p class="card-text text-muted small">Delicious treats</p>
+<div class="d-flex justify-content-between align-items-center">
+<span class="fw-bold text-burgundy">$60.00</span>
+<button class="btn btn-sm btn-outline-success add-to-cart-recommended" data-id="14" data-name="Gourmet Box" data-price="60" data-image="asset/img/hidd4.png">
+<i class="fas fa-cart-plus"></i>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Footer Section -->
+<footer class="bg-dark" id="hiddenjoy_footer">
+  <div class="container">
+    <div class="row">
+      <!-- Footer Column 1 -->
+      <div class="col-md-3 pt-5">
+        <h2 class="h2 text-success border-bottom pb-3 border-light logo">Hidden Joy</h2>
+        <p class="small text-light">Hidden Joy is an online store designed to bring excitement to your shopping.</p>
+      </div>
+
+      <!-- Footer Column 2: Store Info -->
+      <div class="col-md-3 pt-5">
+        <h2 class="h2 text-light border-bottom pb-3 border-light">Store Info</h2>
+        <ul class="list-unstyled text-light footer-link-list small">
+          <li><i class="fas fa-map-marker-alt fa-fw"></i> Alkhobar, Saudi Arabia</li>
+          <li><i class="fa fa-phone fa-fw"></i> <a class="text-decoration-none text-light" href="tel:+966500000000">+966 559661298</a></li>
+          <li><i class="fa fa-envelope fa-fw"></i> <a class="text-decoration-none text-light" href="mailto:info@hiddenjoy.com">info@hiddenjoy.com</a></li>
+        </ul>
+      </div>
+
+      <!-- Footer Column 3: Shop Links -->
+      <div class="col-md-3 pt-5">
+        <h2 class="h2 text-light border-bottom pb-3 border-light">Shop by Joy</h2>
+        <ul class="list-unstyled text-light footer-link-list">
+          <li><a class="text-decoration-none" href="#">Surprise Boxes</a></li>
+          <li><a class="text-decoration-none" href="#">Themes Boxes</a></li>
+          <li><a class="text-decoration-none" href="#">Gifts for Her</a></li>
+        </ul>
+      </div>
+
+      <!-- Footer Column 4: Quick Links -->
+      <div class="col-md-3 pt-5">
+        <h2 class="h2 text-light border-bottom pb-3 border-light">Quick Links</h2>
+        <ul class="list-unstyled text-light footer-link-list">
+          <li><a class="text-decoration-none" href="index.html">Home</a></li>
+          <li><a class="text-decoration-none" href="aboutus.html">About Us</a></li>
+          <li><a class="text-decoration-none" href="contactus.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Bottom: Social + Newsletter -->
+    <div class="row text-light mt-4 align-items-center">
+      <!-- Social Icons -->
+      <div class="col-auto me-auto">
+        <ul class="list-inline footer-icons small mb-0">
+          <li class="list-inline-item border rounded-circle p-2 social-icon"><a href="#"><i class="fab fa-instagram text-light"></i></a></li>
+          <li class="list-inline-item border rounded-circle p-2 social-icon"><a href="#"><i class="fab fa-tiktok text-light"></i></a></li>
+          <li class="list-inline-item border rounded-circle p-2 social-icon"><a href="https://wa.me/559661298" target="_blank"><i class="fab fa-whatsapp text-light"></i></a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter Subscription -->
+<div class="col-auto">
+<div class="input-group input-group-sm">
+</div>
+</div>
+</div>
+</div>
+
+
+  <!-- Footer Copyright -->
+  <div class="w-100 bg-black text-center text-light py-4 mt-4">
+    <strong>&copy; 2026 Hidden Joy</strong> | Made with ❤️ by Hidden Joy
+  </div>
+</footer>
+
+</body>
+</html>

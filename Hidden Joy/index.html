@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ========== PAGE METADATA ========== -->
+    <title>Hidden Joy - Home Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ========== CSS STYLESHEETS ========== -->
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+    <link rel="stylesheet" href="asset/css/templatemo.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="asset/css/fontawesome.min.css">
+    <link rel="stylesheet" href="asset/css/home.css">
+
+    <!-- ========== JAVASCRIPT FILES ========== -->
+    <script src="asset/js/bootstrap.bundle.min.js"></script>
+    <script src="asset/js/custom.js"></script>
+    <script src="asset/js/home.js"></script>
+</head>
+
+<body>
+
+    <!-- ========== NAVIGATION BAR ========== -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow bg-white">
+    <div class="container d-flex justify-content-between align-items-center">
+            
+    <!-- Logo -->
+    <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
+    <img src="asset/img/BOXLOGO.png" alt="Hidden Joy Logo" style="height: 100px;">
+    </a>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navigation Menu -->
+    <div class="align-self-center collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+                
+    <!-- Main Navigation Links -->
+    <div class="flex-fill">
+    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+    <li class="nav-item"><a class="nav-link" href="aboutus.html">About</a></li>
+    <li class="nav-item"><a class="nav-link" href="contactus.html">Contact</a></li>
+    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+    </ul>
+    </div>
+
+    <!-- User Actions -->
+    </div class="navbar align-self-center d-flex align-items-center gap-3">
+                    
+    <!-- Search Icon -->
+    <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
+    <i class="fa fa-fw fa-search text-dark"></i>
+    </a>
+
+    <!-- Shopping Cart -->
+    <a class="nav-link text-dark position-relative" href="basket.html">
+    <i class="fas fa-shopping-cart fa-lg"></i>
+    <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">0</span>
+    </a>
+
+    <!-- User Dropdown -->
+    <div class="dropdown">
+    <a class="nav-link dropdown-toggle text-dark" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="fa fa-fw fa-user"></i>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+    <li><a class="dropdown-item" href="singin.html">Login</a></li>
+    <li><a class="dropdown-item" href="signup.html">Register</a></li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    </div>
+    </nav>
+
+    <!-- ========== SEARCH MODAL ========== -->
+    <div class="modal fade bg-light" id="templatemo_search" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+    <div class="w-100 pt-1 mb-3 text-right">
+    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+    </div>
+    <form class="modal-content modal-body border-0 p-0">
+    <div class="input-group mb-2">
+    <input type="text" class="form-control" placeholder="Search for joy...">
+    <button type="submit" class="input-group-text" style="background: var(--burgundy-main); color: white;">
+    <i class="fa fa-fw fa-search text-white"></i>
+    </button>
+    </div>
+    </form>
+    </div>
+    </div>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="main-content">
+        
+    <!-- ========== HERO CAROUSEL ========== -->
+    <div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="carousel">
+            
+    <!-- Carousel Indicators -->
+    <ol class="carousel-indicators">
+    <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="0" class="active"></li>
+    <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="1"></li>
+    <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="2"></li>
+    </ol>
+
+    <!-- Carousel Items -->
+    <div class="carousel-inner" style="background: url('asset/img/bg1.png') no-repeat center center; background-size: cover;">
+                
+    <!-- Slide 1 -->
+    <div class="carousel-item slide-1 active">
+    <div class="container d-flex flex-column justify-content-center align-items-center hero-content" style="min-height: 400px;">
+    <h1 class="display-5 fw-bold" style="color: var(--burgundy-main);">Unbox the Fun</h1>
+    <p class="lead text-center">Mystery boxes packed with joy, curated just for you.</p>
+    <a href="products.html" class="btn btn-main mt-3">Open Your Joy 🎉</a>
+
+    <!-- Sparkle Animations -->
+    <span class="sparkle" style="left:10%;top:10%"></span>
+    <span class="sparkle" style="left:22%;top:30%;animation-delay:.2s"></span>
+    <span class="sparkle" style="left:6%;top:55%;animation-delay:.4s"></span>
+    </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item slide-2">
+    <div class="container d-flex flex-column justify-content-center align-items-center hero-content" style="min-height: 400px;">
+    <h2 class="fw-bold" style="color: var(--burgundy-main);">Premium Mystery</h2>
+    <p class="lead text-center">Limited drops with premium goodies. Dare to try?</p>
+    <a href="products.html" class="btn btn-main mt-3">Open Your Joy 🎉</a>
+    </div>
+    </div>
+
+<!-- Slide 3 -->
+<div class="carousel-item slide-3">
+<div class="container d-flex flex-column justify-content-center align-items-center hero-content" style="min-height: 400px;">
+<h2 class="fw-bold" style="color: var(--burgundy-main);">Surprises</h2>
+<p class="lead text-center">Pick a box and let fate Surprise you.</p>
+<a href="products.html" class="btn btn-main mt-3">Dare to Try?</a>
+</div>
+</div>
+</div>
+
+<!-- Carousel Controls -->
+<a class="carousel-control-prev text-decoration-none w-auto ps-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="prev">
+<i class="fas fa-chevron-left"></i>
+</a>
+<a class="carousel-control-next text-decoration-none w-auto pe-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="next">
+<i class="fas fa-chevron-right"></i>
+</a>
+</div>
+
+<!-- ========== LIMITED EDITION TIMER ========== -->
+<section class="timer-section">
+<div class="container text-center">
+<h3 class="fw-bold text-burgundy d-inline-flex align-items-center justify-content-center">
+Limited Edition Drop
+</h3>
+
+<p class="mb-4">Grab your Premium Mystery Box before the timer hits zero.</p>
+
+<!-- Countdown Timer -->
+<div class="d-flex justify-content-center gap-3 timer" id="countdown-timer">
+<div class="item">
+<div class="num" id="days">00</div>
+<div class="lbl">Days</div>
+</div>
+<div class="item">
+<div class="num" id="hours">00</div>
+<div class="lbl">Hours</div>
+</div>
+<div class="item">
+<div class="num" id="minutes">00</div>
+<div class="lbl">Minutes</div>
+</div>
+<div class="item">
+<div class="num" id="seconds">00</div>
+<div class="lbl">Seconds</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ========== CATEGORIES SECTION ========== -->
+<section class="py-5 bg-light">
+<section id="categories" class="section-soft py-5">
+<div class="container">
+<div class="text-center mb-4">
+<h2 class="fw-bold text-burgundy">Shop by Joy</h2>
+<p class="text-muted">Choose your vibe and unbox the fun!</p>
+</div>
+
+<div class="row g-4">
+                        
+<!-- Category 1: Gifts for Her -->
+<div class="col-md-4">
+<div class="category-card">
+<img src="asset/img/box2.png" alt="Gifts for Her">
+<div class="category-overlay">What's inside? 👀</div>
+<div class="card-body text-center">
+<h5 class="fw-bold text-burgundy">🎁 Gifts for Her</h5>
+</div>
+</div>
+</div>
+
+<!-- Category 2: Theme Boxes -->
+<div class="col-md-4">
+<div class="category-card">
+<img src="asset/img/box3.png" alt="Theme Boxes">
+<div class="category-overlay">What's inside? 👀</div>
+<div class="card-body text-center">
+<h5 class="fw-bold text-burgundy">🌈 Theme Boxes</h5>
+</div>
+</div>
+</div>
+
+<!-- Category 3: Gifts for Him -->
+<div class="col-md-4">
+<div class="category-card">
+<img src="asset/img/box1.png" alt="Gifts for Him">
+<div class="category-overlay">What's inside? 👀</div>
+<div class="card-body text-center">
+<h5 class="fw-bold text-burgundy">🎁 Gifts for Him</h5>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+<!-- ========== TESTIMONIALS SECTION ========== -->
+<section class="py-5">
+<div class="container">
+<div class="text-center mb-4">
+<h2 class="fw-bold text-burgundy">Happy Unboxings</h2>
+<p class="text-muted">Real reactions from our community</p>
+</div>
+
+<div class="row g-4">
+                    
+<!-- Testimonial 1 -->
+<div class="col-md-4">
+<div class="testimonial-card">
+<div class="d-flex align-items-center gap-3">
+<img class="avatar" src="asset/img/her1.png" alt="Sara">
+<div>
+<b class="text-burgundy">Sara</b><br>
+<small class="text-muted">Premium Box</small>
+</div>
+</div>
+<p class="testimonial-text">"I literally screamed opening it. Best gift to myself!"</p>
+</div>
+</div>
+
+<!-- Testimonial 2 -->
+<div class="col-md-4">
+<div class="testimonial-card">
+<div class="d-flex align-items-center gap-3">
+<img class="avatar" src="asset/img/he1.png" alt="Faisal">
+<div>
+]<b class="text-burgundy">Faisal</b><br>
+<small class="text-muted">Theme Box</small>
+</div>
+</div>
+<p class="testimonial-text">"Loved the theme and the surprises felt super curated."</p>
+</div>
+</div>
+
+<!-- Testimonial 3 -->
+<div class="col-md-4">
+<div class="testimonial-card">
+<div class="d-flex align-items-center gap-3">
+<img class="avatar" src="asset/img/her1.png" alt="Lama">
+<div>
+<b class="text-burgundy">Lama</b><br>
+<small class="text-muted">Fashion Box</small>
+</div>
+</div>
+<p class="testimonial-text">"Unboxing the box makes me 10 times happier."</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ========== NEWSLETTER SECTION ========== -->
+<section class="newsletter-section">
+<div class="container">
+<h3 class="fw-bold text-burgundy mb-3">Stay in the Joy Loop!</h3>
+<p class="text-muted mb-4">Get updates on new drops, exclusive offers, and surprise announcements</p>
+                
+<!-- Newsletter Form -->
+<div class="newsletter-form">
+<div class="input-group">
+<input type="email" id="newsletter-email" class="form-control newsletter-input" placeholder="Your email address">
+<button class="btn newsletter-btn" type="button" onclick="subscribeNewsletter()">Subscribe</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="bg-dark" id="hiddenjoy_footer">
+<div class="container">
+<div class="row">
+                
+<!-- Company Info -->
+<div class="col-md-3 pt-5">
+<h2 class="h2 text-success border-bottom pb-3 border-light logo">Hidden Joy</h2>
+<p class="small text-light">Hidden Joy is an online store designed to bring excitement to your shopping.</p>
+</div>
+
+<!-- Store Info -->
+<div class="col-md-3 pt-5">
+<h2 class="h2 text-light border-bottom pb-3 border-light">Store Info</h2>
+<ul class="list-unstyled text-light footer-link-list small">
+<li><i class="fas fa-map-marker-alt fa-fw"></i> Alkhobar, Saudi Arabia</li>
+<li><i class="fa fa-phone fa-fw"></i> <a class="text-decoration-none text-light" href="tel:+966559661298">+966 559661298</a></li>
+<li><i class="fa fa-envelope fa-fw"></i> <a class="text-decoration-none text-light" href="mailto:info@hiddenjoy.com">info@hiddenjoy.com</a></li>
+</ul>
+</div>
+
+<!-- Shop Categories -->
+<div class="col-md-3 pt-5">
+<h2 class="h2 text-light border-bottom pb-3 border-light">Shop by Joy</h2>
+<ul class="list-unstyled text-light footer-link-list">
+<li><a class="text-decoration-none" href="products.html">Surprise Boxes</a></li>
+<li><a class="text-decoration-none" href="products.html">Theme Boxes</a></li>
+<li><a class="text-decoration-none" href="products.html">Gifts for Her</a></li>
+</ul>
+</div>
+
+<!-- Quick Links -->
+<div class="col-md-3 pt-5">
+<h2 class="h2 text-light border-bottom pb-3 border-light">Quick Links</h2>
+<ul class="list-unstyled text-light footer-link-list">
+<li><a class="text-decoration-none" href="index.html">Home</a></li>
+<li><a class="text-decoration-none" href="aboutus.html">About Us</a></li>
+<li><a class="text-decoration-none" href="contactus.html">Contact</a></li>
+</ul>
+</div>
+</div>
+
+<!-- Social Media & Newsletter -->
+<div class="row text-light mt-4 align-items-center">
+                
+<!-- Social Media Icons -->
+<div class="col-auto me-auto">
+<ul class="list-inline footer-icons small mb-0">
+<li class="list-inline-item border rounded-circle p-2 social-icon">
+<a href="#"><i class="fab fa-instagram text-light"></i></a>
+</li>
+<li class="list-inline-item border rounded-circle p-2 social-icon">
+<a href="#"><i class="fab fa-tiktok text-light"></i></a>
+</li>
+<li class="list-inline-item border rounded-circle p-2 social-icon">
+<a href="https://wa.me/559661298" target="_blank"><i class="fab fa-whatsapp text-light"></i></a>
+</li>
+</ul>
+</div>
+
+<!-- Newsletter (Empty for now) -->
+<div class="col-auto">
+<div class="input-group input-group-sm">
+<!-- Newsletter input can be added here if needed -->
+</div>
+</div>
+</div>
+</div>
+
+<!-- Copyright -->
+<div class="w-100 bg-black text-center text-light py-4 mt-4">
+<strong>&copy; 2026 Hidden Joy</strong> | Made with ❤️ by Hidden Joy
+</div>
+</footer>
+
+</body>
+</html>

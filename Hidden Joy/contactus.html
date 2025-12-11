@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hidden Joy - Contact Us</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" href="asset/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="asset/img/favicon.ico">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+    <link rel="stylesheet" href="asset/css/templatemo.css">
+    <link rel="stylesheet" href="asset/css/contactus.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- JS Files -->
+    <script src="asset/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="asset/css/fontawesome.min.css">
+
+    <!-- Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" crossorigin=""/>
+    
+</head>
+
+<body>
+
+<!-- Header / Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light shadow sticky-top bg-white">
+    <div class="container d-flex justify-content-between align-items-center">
+        <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
+            <img src="asset/img/BOXLOGO.png" alt="Hidden Joy Logo" style="height: 100px;">
+        </a>
+
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+    <div class="align-self-center collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+    <div class="flex-fill">
+    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+    <li class="nav-item"><a class="nav-link" href="aboutus.html">About</a></li>
+    <li class="nav-item"><a class="nav-link active" href="contactus.html">Contact</a></li>
+    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+    </ul>
+    </div>
+
+<!-- Search & User -->
+<div class="navbar align-self-center d-flex align-items-center gap-3">
+
+<!-- Desktop search -->
+<a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
+<i class="fa fa-fw fa-search text-dark"></i>
+</a>
+
+<!-- Cart Icon -->
+<a class="nav-link text-dark position-relative" href="basket.html">
+<i class="fas fa-shopping-cart fa-lg"></i>
+<span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">0</span>
+</a>
+
+<!-- User dropdown -->
+<div class="dropdown">
+<a class="nav-link dropdown-toggle text-dark" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+<i class="fa fa-fw fa-user"></i>
+</a>
+<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+<li><a class="dropdown-item" href="singin.html">Login</a></li>
+<li><a class="dropdown-item" href="signup.html">Register</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</nav>
+
+<!-- Page Header -->
+<div class="container-fluid bg-light py-5">
+    <div class="col-md-6 m-auto text-center">
+        <h1 class="fw-bold text-burgundy">Contact Us</h1>
+        <p class="text-muted lead">We'd love to hear from you. Reach out to us through any of the channels below!</p>
+    </div>
+</div>
+
+<!-- Contact Section -->
+<div class="container py-5">
+<div class="row g-5">
+<!-- Contact Information -->
+<div class="col-lg-4">
+<div class="row g-4">
+<div class="col-12">
+<div class="contact-info-card">
+<div class="contact-icon">
+<i class="fas fa-map-marker-alt"></i>
+</div>
+<h4 class="text-burgundy">Our Location</h4>
+<p class="text-muted">Alkhobar, Saudi Arabia</p>
+</div>
+</div>
+                
+<div class="col-12">
+<div class="contact-info-card">
+<div class="contact-icon">
+<i class="fas fa-phone"></i>
+</div>
+<h4 class="text-burgundy">Phone Number</h4>
+<p class="text-muted">+966 559661298</p>
+</div>
+</div>
+                
+<div class="col-12">
+<div class="contact-info-card">
+<div class="contact-icon">
+<i class="fas fa-envelope"></i>
+</div>
+<h4 class="text-burgundy">Email Address</h4>
+<p class="text-muted">info@hiddenjoy.com</p>
+</div>
+</div>
+                
+<div class="col-12">
+<div class="contact-info-card">
+<div class="contact-icon">
+<i class="fas fa-clock"></i>
+</div>
+<h4 class="text-burgundy">Working Hours</h4>
+<p class="text-muted">Sunday - Thursday: 9AM - 6PM</p>
+</div>
+</div>
+</div>
+</div>
+        
+<!-- Map and Contact Form -->
+<div class="col-lg-8">
+ <!-- Map -->
+<div class="mb-5">
+<h3 class="text-burgundy mb-3">Find Us</h3>
+<div class="map-container">
+<div id="mapid" style="width:100%; height:300px;"></div>
+</div>
+</div>
+            
+<!-- Contact Form -->
+<div class="bg-white p-4 shadow rounded">
+<h3 class="text-burgundy mb-4">Send Us a Message</h3>
+<form method="post" onsubmit="showMessage(event)">
+<div class="row g-3">
+<div class="col-md-6">
+<label class="form-label">Name</label>
+<input type="text" class="form-control" placeholder="Your Name" required>
+</div>
+<div class="col-md-6">
+<label class="form-label">Email</label>
+<input type="email" class="form-control" placeholder="Your Email" required>
+</div>
+</div>
+
+<div class="mt-3">
+<label class="form-label">Subject</label>
+<input type="text" class="form-control" placeholder="Subject" required>
+</div>
+
+<div class="mt-3">
+<label class="form-label">Message</label>
+<textarea class="form-control" rows="6" placeholder="Write your message" required></textarea>
+</div>
+
+<div class="text-end mt-4">
+<button type="submit" class="btn btn-main btn-lg">Send Message</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+
+<!-- FAQ Section -->
+<section class="py-5 bg-light">
+<div class="text-center mb-4">
+<h2 class="fw-bold text-burgundy">FAQs</h2>
+<p class="text-muted">All you need to know before unboxing</p>
+</div>
+
+<div class="accordion" id="faqAccordion">
+<div class="accordion-item">
+<h2 class="accordion-header" id="faq1">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1">
+What's inside a mystery box?
+</button>
+</h2>
+<div id="faqCollapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+<div class="accordion-body">Each box is curated with unique items based on the theme you select. Surprises only!</div>
+</div>
+</div>
+
+<div class="accordion-item">
+<h2 class="accordion-header" id="faq2">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2">
+Can I return a mystery box?
+</button>
+</h2>
+<div id="faqCollapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+<div class="accordion-body">Due to the nature of surprises, returns are not accepted unless items are damaged.</div>
+</div>
+</div>
+
+<div class="accordion-item">
+<h2 class="accordion-header" id="faq3">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3">
+Do you ship internationally?
+</button>
+</h2>
+<div id="faqCollapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+<div class="accordion-body">Yes! We ship worldwide with reliable partners.</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main> 
+<!-- Footer -->
+<footer class="bg-dark" id="hiddenjoy_footer">
+<div class="container">
+<div class="row">
+
+<!-- Footer Column 1 -->
+<div class="col-md-3 pt-5">
+<h2 class="h2 text-success border-bottom pb-3 border-light logo">Hidden Joy</h2>
+<p class="small text-light">Hidden Joy is an online store designed to bring excitement to your shopping.</p>
+</div>
+
+<!-- Footer Column 2 -->
+<div class="col-md-3 pt-5">
+<h2 class="h2 text-light border-bottom pb-3 border-light">Store Info</h2>
+<ul class="list-unstyled text-light footer-link-list small">
+<li><i class="fas fa-map-marker-alt fa-fw"></i> Alkhobar, Saudi Arabia</li>
+<li><i class="fa fa-phone fa-fw"></i> <a class="text-decoration-none text-light" href="tel:+966500000000">+966 559661298</a></li>
+<li><i class="fa fa-envelope fa-fw"></i> <a class="text-decoration-none text-light" href="mailto:info@hiddenjoy.com">info@hiddenjoy.com</a></li>
+</ul>
+</div>
+
+<!-- Footer Column 3 -->
+<div class="col-md-3 pt-5">
+<h2 class="h2 text-light border-bottom pb-3 border-light">Shop by Joy</h2>
+<ul class="list-unstyled text-light footer-link-list">
+<li><a class="text-decoration-none" href="#">Surprise Boxes</a></li>
+<li><a class="text-decoration-none" href="#">Themes boxes</a></li>
+<li><a class="text-decoration-none" href="#">Gifts for Her</a></li>
+</ul>
+</div>
+
+<!-- Footer Column 4 -->
+<div class="col-md-3 pt-5">
+<h2 class="h2 text-light border-bottom pb-3 border-light">Quick Links</h2>
+<ul class="list-unstyled text-light footer-link-list">
+<li><a class="text-decoration-none" href="index.html">Home</a></li>
+<li><a class="text-decoration-none" href="aboutus.html">About Us</a></li>
+<li><a class="text-decoration-none" href="contactus.html">Contact</a></li>
+</ul>
+</div>
+
+</div>
+
+<!-- Social + Subscribe -->
+<div class="row text-light mt-4 align-items-center">
+<div class="col-auto me-auto">
+<ul class="list-inline footer-icons small mb-0">
+<li class="list-inline-item border rounded-circle p-2 social-icon"><a href="#"><i class="fab fa-instagram text-light"></i></a></li>
+<li class="list-inline-item border rounded-circle p-2 social-icon"><a href="#"><i class="fab fa-tiktok text-light"></i></a></li>
+<li class="list-inline-item border rounded-circle p-2 social-icon"><a href="https://wa.me/559661298" target="_blank"><i class="fab fa-whatsapp text-light"></i></a></li>
+</ul>
+</div>
+
+<div class="col-auto">
+<div class="input-group input-group-sm">
+</div>
+</div>
+</div>
+ </div>
+
+
+    <!-- Copy -->
+    <div class="w-100 bg-black text-center text-light py-4 mt-4">
+        <strong>&copy; 2026 Hidden Joy</strong> | Made with ❤️ by Hidden Joy
+    </div>
+</footer>
+
+<!-- Map Script -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" crossorigin=""></script>
+<script>
+    // Initialize the map
+    var mymap = L.map('mapid').setView([26.2860, 50.2140], 13); // Alkhobar coordinates
+    
+    // Add tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(mymap);
+    
+    // Add a marker
+    L.marker([26.2860, 50.2140]).addTo(mymap)
+        .bindPopup('Hidden Joy Store<br>Alkhobar, Saudi Arabia')
+        .openPopup();
+        
+    // Fake function for newsletter subscription
+    function fakeSend() {
+        const emailInput = document.getElementById('emailInput');
+        if (emailInput.value) {
+            alert('Thank you for subscribing to our newsletter!');
+            emailInput.value = '';
+        } else {
+            alert('Please enter your email address.');
+        }
+    }
+function showMessage(event) {
+    event.preventDefault(); 
+    alert('Your message has been sent successfully!');
+    return false;
+}
+
+
+
+</script>
+
+</body>
+</html>

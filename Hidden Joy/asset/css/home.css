@@ -1,0 +1,316 @@
+ :root {
+            --pink: #ff6f91;
+            --burgundy: #800020;
+            --burgundy-main: #D13048;
+            --burgundy-dark: #a32234;
+            --secondary-color: #28a745; /* Success Green */
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+        }
+        
+        body {
+            font-family: 'Quicksand', sans-serif;
+            color: #333;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Fredoka', sans-serif;
+        }
+        
+        .text-burgundy {
+            color: var(--burgundy-main);
+        }
+        
+        .bg-burgundy {
+            background-color: var(--burgundy-main);
+        }
+        
+        .btn-main {
+            background-color: var(--burgundy-main);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-main:hover {
+            background-color: var(--burgundy-dark);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(209, 48, 72, 0.3);
+        }
+        
+        /* Hero Section - Return to Original */
+        .carousel-item {
+            min-height: 400px;
+            background: url('asset/img/bg1.png') no-repeat center center;
+            background-size: cover;
+        }
+        
+        .hero-content {
+            text-align: center;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .sparkle {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ffffff"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>') no-repeat center;
+            animation: sparkle 2s infinite;
+        }
+        
+        @keyframes sparkle {
+            0%, 100% { transform: scale(1); opacity: 0.7; }
+            50% { transform: scale(1.3); opacity: 1; }
+        }
+        
+        /* Timer Section - White Background */
+        .timer-section {
+            background: white;
+            color: var(--dark-color);
+            padding: 50px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .timer {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .timer .item {
+            background: var(--light-color);
+            padding: 15px;
+            border-radius: 10px;
+            min-width: 80px;
+            text-align: center;
+            border: 2px solid var(--burgundy-main);
+        }
+        
+        .timer .num {
+            font-size: 2rem;
+            font-weight: 700;
+            font-family: 'Fredoka', sans-serif;
+            color: var(--burgundy-main);
+        }
+        
+        .timer .lbl {
+            font-size: 0.8rem;
+            margin-top: 5px;
+            color: var(--dark-color);
+        }
+        
+        /* Categories Section */
+        .category-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            height: 100%;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .category-card img {
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .category-card:hover img {
+            transform: scale(1.05);
+        }
+        
+        .category-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(209, 48, 72, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .category-card:hover .category-overlay {
+            opacity: 1;
+        }
+        
+        .category-card .card-body {
+            background: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        /* Testimonials Section */
+        .testimonial-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            padding: 25px;
+            transition: all 0.3s ease;
+            height: 100%;
+            background: white;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+        
+        .avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--burgundy-main);
+        }
+        
+        .testimonial-text {
+            position: relative;
+            padding-left: 20px;
+            font-style: italic;
+        }
+        
+        .testimonial-text::before {
+            content: '"';
+            font-size: 40px;
+            color: var(--pink);
+            position: absolute;
+            left: -10px;
+            top: -15px;
+            opacity: 0.3;
+        }
+        
+        /* Newsletter Section - Light Background like Shop by Joy */
+        .newsletter-section {
+            background: var(--light-color);
+            color: var(--dark-color);
+            padding: 60px 0;
+            text-align: center;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        .newsletter-form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .newsletter-input {
+            border: 1px solid #dee2e6;
+            border-radius: 8px 0 0 8px;
+            padding: 12px 15px;
+            background: white;
+            color: var(--dark-color);
+        }
+        
+        .newsletter-input::placeholder {
+            color: #6c757d;
+        }
+        
+        .newsletter-btn {
+            border-radius: 0 8px 8px 0;
+            background: var(--burgundy-main);
+            border: 1px solid var(--burgundy-main);
+            padding: 12px 25px;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .newsletter-btn:hover {
+            background: var(--burgundy-dark);
+            border-color: var(--burgundy-dark);
+        }
+        
+        /* Navigation Improvements */
+        .nav-link {
+            position: relative;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--burgundy-main);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+        
+        /* Footer Improvements */
+        .footer-link-list a {
+            transition: all 0.3s ease;
+        }
+        
+        .footer-link-list a:hover {
+            color: var(--pink) !important;
+            padding-left: 5px;
+        }
+        
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-3px);
+            background: var(--burgundy-main) !important;
+        }
+        
+        /* Logo Color Update */
+        .navbar-brand.text-success {
+            color: var(--burgundy-main) !important;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .carousel-item {
+                min-height: 350px;
+            }
+            
+            .timer {
+                gap: 10px;
+            }
+            
+            .timer .item {
+                min-width: 60px;
+                padding: 10px;
+            }
+            
+            .timer .num {
+                font-size: 1.5rem;
+            }
+            
+            .category-card img {
+                height: 200px;
+            }
+        }
+        .hero-content h1,
+.hero-content h2,
+.hero-content p {
+    color: black; /* أو #000 */
+    text-shadow: none; /* إزالة أي ظل أبيض */
+}

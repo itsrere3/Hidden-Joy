@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hidden Joy - Signin Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon" href="asset/img/apple-icon.png">
+  <link rel="shortcut icon" type="image/x-icon" href="asset/img/favicon.ico">
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+  <link rel="stylesheet" href="asset/css/templatemo.css">
+  <link rel="stylesheet" href="asset/css/singin.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="asset/css/fontawesome.min.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Header -->
+<nav class="navbar navbar-expand-lg navbar-light shadow">
+  <div class="container d-flex justify-content-between align-items-center">
+
+    <!-- Logo -->
+    <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
+      <img src="asset/img/BOXLOGO.png" alt="Hidden Joy Logo" style="height: 100px;">
+    </a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links -->
+    <div class="align-self-center collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+      <div class="flex-fill">
+        <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="aboutus.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contactus.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+        </ul>
+      </div>
+
+      <!-- Search & User -->
+      <div class="navbar align-self-center d-flex align-items-center gap-3">
+
+        <!-- Desktop search -->
+        <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
+          <i class="fa fa-fw fa-search text-dark"></i>
+        </a>
+
+        <!-- Basket Icon -->
+        <a class="nav-link text-dark position-relative" href="basket.html">
+          <i class="fas fa-shopping-cart fa-lg"></i>
+          <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">0</span>
+        </a>
+
+        <!-- User Dropdown -->
+        <div class="dropdown">
+          <a class="nav-link dropdown-toggle text-dark" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa fa-fw fa-user"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+            <li><a class="dropdown-item" href="singin.html">Login</a></li>
+            <li><a class="dropdown-item" href="signup.html">Register</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Search Modal -->
+<div class="modal fade bg-light" id="templatemo_search" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="w-100 pt-1 mb-3 text-right">
+      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+    </div>
+    <form class="modal-content modal-body border-0 p-0">
+      <div class="input-group mb-2">
+        <input type="text" class="form-control" placeholder="Search ...">
+        <button type="submit" class="input-group-text bg-success text-light">
+          <i class="fa fa-fw fa-search text-white"></i>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Page Header with Background -->
+<div class="page-header" style="
+     background: url('asset/img/bg1.png') no-repeat center center;
+     background-size: cover;
+     padding: 120px 0; 
+     text-align: center;
+     color: white; 
+">
+  <div class="container">
+    <h1 class="h1 fw-bold">Welcome Back</h1>
+    <p class="lead">Sign in to unlock your hidden joys and continue your journey of delightful surprises.</p>
+  </div>
+</div>
+
+<!-- Login Form Container -->
+<div class="container py-5">
+  <div class="login-form-container">
+    <form class="needs-validation" method="post" role="form" novalidate>
+      
+      <!-- Email Input -->
+      <div class="mb-4">
+        <label for="email" class="form-label">Email Address</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="your.email@example.com" required>
+        <div class="invalid-feedback">
+          Please provide a valid email address.
+        </div>
+      </div>
+
+      <!-- Password Input with Toggle -->
+      <div class="mb-4">
+        <label for="password" class="form-label">Password</label>
+        <div class="password-input-group">
+          <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required minlength="6">
+          <button type="button" class="toggle-password" id="togglePassword">
+            <i class="far fa-eye"></i>
+          </button>
+          <div class="invalid-feedback">
+            Password must be at least 6 characters long.
+          </div>
+        </div>
+      </div>
+
+      <!-- Remember Me & Forgot Password -->
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="rememberMe">
+          <label class="form-check-label" for="rememberMe">Keep me signed in</label>
+        </div>
+        <a href="forgot-password.html" class="text-burgundy text-decoration-none">Forgot Password?</a>
+      </div>
+
+      <!-- Login Button -->
+      <div class="d-grid gap-2 mb-4">
+        <button type="submit" class="btn btn-login">Sign In</button>
+      </div>
+
+      <!-- Divider -->
+      <div class="divider">
+        <span class="divider-text">Or continue with</span>
+      </div>
+
+      <!-- Social Login Options -->
+      <div class="social-login mb-4">
+        <a href="#" class="social-btn google">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="#" class="social-btn facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="social-btn apple">
+          <i class="fab fa-apple"></i>
+        </a>
+      </div>
+
+      <!-- Registration Link -->
+      <div class="text-center">
+        <p class="mb-0">Don't have an account? <a href="signup.html" class="text-burgundy fw-bold text-decoration-none">Create one here</a></p>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark" id="hiddenjoy_footer">
+  <div class="container">
+    <div class="row">
+      <!-- Footer Column 1 -->
+      <div class="col-md-3 pt-5">
+        <h2 class="h2 text-success border-bottom pb-3 border-light logo">Hidden Joy</h2>
+        <p class="small text-light">Hidden Joy is an online store designed to bring excitement to your shopping.</p>
+      </div>
+
+      <!-- Footer Column 2: Store Info -->
+      <div class="col-md-3 pt-5">
+        <h2 class="h2 text-light border-bottom pb-3 border-light">Store Info</h2>
+        <ul class="list-unstyled text-light footer-link-list small">
+          <li><i class="fas fa-map-marker-alt fa-fw"></i> Alkhobar, Saudi Arabia</li>
+          <li><i class="fa fa-phone fa-fw"></i> <a class="text-decoration-none text-light" href="tel:+966500000000">+966 559661298</a></li>
+          <li><i class="fa fa-envelope fa-fw"></i> <a class="text-decoration-none text-light" href="mailto:info@hiddenjoy.com">info@hiddenjoy.com</a></li>
+        </ul>
+      </div>
+
+      <!-- Footer Column 3: Shop Links -->
+      <div class="col-md-3 pt-5">
+        <h2 class="h2 text-light border-bottom pb-3 border-light">Shop by Joy</h2>
+        <ul class="list-unstyled text-light footer-link-list">
+          <li><a class="text-decoration-none" href="#">Surprise Boxes</a></li>
+          <li><a class="text-decoration-none" href="#">Themes boxes</a></li>
+          <li><a class="text-decoration-none" href="#">Gifts for Her</a></li>
+        </ul>
+      </div>
+
+      <!-- Footer Column 4: Quick Links -->
+      <div class="col-md-3 pt-5">
+        <h2 class="h2 text-light border-bottom pb-3 border-light">Quick Links</h2>
+        <ul class="list-unstyled text-light footer-link-list">
+          <li><a class="text-decoration-none" href="index.html">Home</a></li>
+          <li><a class="text-decoration-none" href="aboutus.html">About Us</a></li>
+          <li><a class="text-decoration-none" href="contactus.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Bottom: Social + Newsletter -->
+    <div class="row text-light mt-4 align-items-center">
+      <!-- Social Icons -->
+      <div class="col-auto me-auto">
+        <ul class="list-inline footer-icons small mb-0">
+          <li class="list-inline-item border rounded-circle p-2"><a href="#"><i class="fab fa-instagram text-light"></i></a></li>
+          <li class="list-inline-item border rounded-circle p-2"><a href="#"><i class="fab fa-tiktok text-light"></i></a></li>
+          <li class="list-inline-item border rounded-circle p-2"><a href="https://wa.me/559661298" target="_blank"><i class="fab fa-whatsapp text-light"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Copyright -->
+  <div class="w-100 bg-black text-center text-light py-4 mt-4">
+    <strong>&copy; 2026 Hidden Joy</strong> | Made with ❤️ by Hidden Joy
+  </div>
+</footer>
+<script src="asset/js/signup.js" defer></script>
+</body>
+</html>

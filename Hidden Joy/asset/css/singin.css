@@ -1,0 +1,193 @@
+:root {
+        --pink: #ff6f91;
+        --burgundy: #800020;
+        --burgundy-main: #D13048;
+        --burgundy-dark: #a32234;
+    }
+    
+    /* Enhanced header with gradient overlay */
+    .page-header {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .page-header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(209, 48, 72, 0.8), rgba(255, 111, 145, 0.7));
+        z-index: 1;
+    }
+    
+    .page-header .container {
+        position: relative;
+        z-index: 2;
+    }
+    
+    /* Enhanced login form styling */
+    .login-form-container {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        background: white;
+        margin-top: -50px;
+        position: relative;
+        z-index: 10;
+    }
+    
+    /* Form input enhancements */
+    .form-control {
+        border-radius: 8px;
+        padding: 12px 15px;
+        border: 1px solid #e0e0e0;
+        transition: all 0.3s;
+    }
+    
+    .form-control:focus {
+        border-color: var(--burgundy-main);
+        box-shadow: 0 0 0 0.2rem rgba(209, 48, 72, 0.25);
+    }
+    
+    /* Password input group */
+    .password-input-group {
+        position: relative;
+    }
+    
+    .toggle-password {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: #6c757d;
+        cursor: pointer;
+    }
+    
+    /* Enhanced button styling */
+    .btn-login {
+        background: linear-gradient(135deg, var(--burgundy-main), var(--pink));
+        border: none;
+        border-radius: 8px;
+        padding: 12px 30px;
+        font-weight: 600;
+        transition: all 0.3s;
+        width: 100%;
+        color: white;
+    }
+    
+    .btn-login:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(209, 48, 72, 0.4);
+        background: linear-gradient(135deg, var(--burgundy-dark), var(--burgundy-main));
+        color: white;
+    }
+    
+    /* Social login buttons */
+    .social-login {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin: 20px 0;
+    }
+    
+    .social-btn {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #e0e0e0;
+        background: white;
+        transition: all 0.3s;
+    }
+    
+    .social-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .social-btn.google { color: #DB4437; }
+    .social-btn.facebook { color: #4267B2; }
+    .social-btn.apple { color: #000; }
+    
+    /* Divider with text */
+    .divider {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: 20px 0;
+    }
+    
+    .divider::before,
+    .divider::after {
+        content: '';
+        flex: 1;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .divider-text {
+        padding: 0 15px;
+        color: #6c757d;
+        font-size: 0.9rem;
+    }
+    
+    /* Form feedback styling */
+    .invalid-feedback {
+        display: none;
+        width: 100%;
+        margin-top: 0.25rem;
+        font-size: 0.875rem;
+        color: #dc3545;
+    }
+    
+    .was-validated .form-control:invalid ~ .invalid-feedback {
+        display: block;
+    }
+    
+    /* Burgundy text and links */
+    .text-burgundy {
+        color: var(--burgundy-main) !important;
+    }
+    
+    a.text-burgundy {
+        color: var(--burgundy-main) !important;
+    }
+    
+    a.text-burgundy:hover {
+        color: var(--burgundy-dark) !important;
+    }
+    
+    /* Update navbar brand color */
+    .navbar-brand.text-success {
+        color: var(--burgundy-main) !important;
+    }
+    
+    /* Update cart badge color */
+    .badge.bg-success {
+        background-color: var(--burgundy-main) !important;
+    }
+    
+    /* Update search button color */
+    .input-group-text.bg-success {
+        background-color: var(--burgundy-main) !important;
+        border-color: var(--burgundy-main);
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .login-form-container {
+            margin-top: -30px;
+            padding: 1.5rem;
+        }
+        
+        .page-header {
+            padding: 80px 0;
+        }
+    }
